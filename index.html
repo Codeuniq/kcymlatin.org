@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KCYM Latin State Committee</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<!-- NAV -->
+	<nav>
+		<div class="nav-wrap">
+			<a href="#" class="nav-brand">
+				<div class="nav-badge">
+					<img src="imgs/kcym_logo.png" alt="KCYM Logo">
+				</div>
+				<div class="nav-text">
+					<strong>KCYM Latin State</strong>
+					<small>Kerala Catholic Youth Movement</small>
+				</div>
+			</a>
+			<ul class="nav-links">
+				<li><a href="#programs">Programs</a></li>
+				<li><a href="#news">News</a></li>
+				<li><a href="#gallery">Gallery</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#dioceses">Dioceses</a></li>
+				<li><a href="#leadership">Leadership</a></li>
+				<li><a href="#contact" class="nav-cta">Contact</a></li>
+			</ul>
+			<button class="hamburger" onclick="toggleMob()" aria-label="Menu">
+				<span></span><span></span><span></span>
+			</button>
+		</div>
+		<div class="mob-menu" id="mobMenu">
+			<a href="#programs" onclick="closeMob()">Programs</a>
+			<a href="#news" onclick="closeMob()">News</a>
+			<a href="#gallery" onclick="closeMob()">Gallery</a>
+			<a href="#services" onclick="closeMob()">Services</a>
+			<a href="#dioceses" onclick="closeMob()">Dioceses</a>
+			<a href="#leadership" onclick="closeMob()">Leadership</a>
+			<a href="#contact" onclick="closeMob()">Contact</a>
+		</div>
+	</nav>
+
+	<!-- TICKER -->
+	<div class="ticker">
+		<div class="ticker-lbl">Updates</div>
+		<div class="ticker-scroll">
+			<div class="ticker-track">
+				<span class="ticker-item">State Senate Minutes Published</span>
+				<span class="ticker-item">Global Youth Day - All 12 Dioceses</span>
+				<span class="ticker-item">Kalolsavam 2026 - Registration Open</span>
+				<span class="ticker-item">Y-MAP Leadership Batch 3 Announced</span>
+				<span class="ticker-item">FIMCAP Delegation - Applications Open</span>
+				<span class="ticker-item">Membership Form 2026 Available</span>
+				<span class="ticker-item">State Senate Minutes Published</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- HERO -->
+	<section class="hero">
+		<div class="hero-wrap">
+			<div>
+				<div class="hero-eyebrow">Official State Portal · 2026</div>
+				<h1>Kerala Catholic<br><em>Youth Movement</em><br>Latin State</h1>
+				<div class="hero-motto">
+					<i class="fas fa-quote-left" style="font-size:12px;color:var(--yellow)"></i>
+					To Change, To Lead, To Serve
+				</div>
+				<p class="hero-desc">
+					The one and only official youth movement for Latin Rite Catholic youth in Kerala,
+					operating under the Kerala Latin Catholic Bishops' Council (KLCBC) across all 12 dioceses.
+				</p>
+				<div class="hero-btns">
+					<a href="#programs" class="btn-red">Explore Programs</a>
+					<a href="#contact" class="btn-outline">Get in Touch</a>
+				</div>
+			</div>
+			<div class="hero-stats">
+				<div class="stats-grid">
+					<div class="stat-item">
+						<div class="stat-num">12</div>
+						<div class="stat-label">Dioceses</div>
+					</div>
+					<div class="stat-item">
+						<div class="stat-num">1960</div>
+						<div class="stat-label">Est. Year</div>
+					</div>
+					<div class="stat-item">
+						<div class="stat-num">50K+</div>
+						<div class="stat-label">Members</div>
+					</div>
+					<div class="stat-item">
+						<div class="stat-num">1</div>
+						<div class="stat-label">Voice</div>
+					</div>
+				</div>
+				<hr class="stat-divider">
+				<p class="stat-note">
+					The <strong>only recognised</strong> youth body for Latin Catholics in Kerala,
+					affiliated with ICYM National &amp; FIMCAP International.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- PROGRAMS -->
+	<section id="programs" class="programs">
+		<div class="container">
+			<div class="prog-header">
+				<div>
+					<p class="sec-eyebrow">What We Do</p>
+					<h2 class="sec-title">State <em>Programs</em></h2>
+				</div>
+				<a href="#" class="btn-red" style="font-size:11px;padding:11px 24px;white-space:nowrap">View Calendar
+					2026</a>
+			</div>
+			<div class="prog-grid">
+				<div class="prog-card" onclick="openModal('destination')">
+					<img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80"
+						alt="">
+					<div class="prog-overlay"></div>
+					<div class="prog-body">
+						<span class="prog-tag">Annual</span>
+						<h4 class="prog-title">Destination</h4>
+						<p class="prog-sub">Career Guidance Training Program</p>
+					</div>
+				</div>
+				<div class="prog-card" onclick="openModal('ymap')">
+					<img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80"
+						alt="">
+					<div class="prog-overlay"></div>
+					<div class="prog-body">
+						<span class="prog-tag">Leadership</span>
+						<h4 class="prog-title">Y-MAP</h4>
+						<p class="prog-sub">Youth Missionary Animation Program</p>
+					</div>
+				</div>
+				<div class="prog-card" onclick="openModal('anugraha_vazhiye')">
+					<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80"
+						alt="">
+					<div class="prog-overlay"></div>
+					<div class="prog-body">
+						<span class="prog-tag">Spiritual</span>
+						<h4 class="prog-title">Anugraha Vazhiyee</h4>
+						<p class="prog-sub">Journy with 100+ Relics</p>
+					</div>
+				</div>
+				<div class="prog-card" onclick="openModal('laahiri')">
+					<img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80"
+						alt="">
+					<div class="prog-overlay"></div>
+					<div class="prog-body">
+						<span class="prog-tag">Outreach</span>
+						<h4 class="prog-title">Laahiri</h4>
+						<p class="prog-sub">Campaign against Drug </p>
+					</div>
+				</div>
+				<div class="prog-card prog-cta"
+					onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
+					<i class="fas fa-plus-circle"></i>
+					<div class="prog-cta-title">Propose a Program</div>
+					<div class="prog-cta-sub">Submit to the State Committee</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- NEWS + DOCS -->
+	<section id="news" class="news-sec">
+		<div class="news-inner">
+			<div>
+				<p class="sec-eyebrow">Announcements</p>
+				<h2 class="sec-title">Latest <em>News</em></h2>
+				<div class="news-list" id="newsList"></div>
+				<div style="margin-top:20px">
+					<button id="loadMoreBtn" onclick="loadMore()" class="btn-outline"
+						style="font-size:11px;padding:10px 24px;">Load More</button>
+				</div>
+			</div>
+
+			<div class="docs-panel">
+				<div class="docs-panel-title">Circulars & Docs</div>
+				<div class="docs-panel-sub">Official documents for download</div>
+
+				<div class="doc-row">
+					<div class="doc-ico"><i class="fas fa-file-pdf"></i></div>
+					<div style="flex:1">
+						<div class="doc-name">Membership Form 2026</div>
+						<div class="doc-meta">PDF · 248 KB</div>
+					</div>
+					<a href="#" class="doc-dl"><i class="fas fa-download"></i></a>
+				</div>
+				<div class="doc-row">
+					<div class="doc-ico"><i class="fas fa-book"></i></div>
+					<div style="flex:1">
+						<div class="doc-name">KCYM Constitution (Latin Rite)</div>
+						<div class="doc-meta">PDF · 1.2 MB</div>
+					</div>
+					<a href="#" class="doc-dl"><i class="fas fa-download"></i></a>
+				</div>
+				<div class="doc-row">
+					<div class="doc-ico"><i class="fas fa-file-alt"></i></div>
+					<div style="flex:1">
+						<div class="doc-name">Senate Minutes – Feb 2025</div>
+						<div class="doc-meta">PDF · 560 KB</div>
+					</div>
+					<a href="#" class="doc-dl"><i class="fas fa-download"></i></a>
+				</div>
+				<div class="doc-row">
+					<div class="doc-ico"><i class="fas fa-calendar-alt"></i></div>
+					<div style="flex:1">
+						<div class="doc-name">State Calendar 2026</div>
+						<div class="doc-meta">PDF · 800 KB</div>
+					</div>
+					<a href="#" class="doc-dl"><i class="fas fa-download"></i></a>
+				</div>
+				<div class="doc-row">
+					<div class="doc-ico"><i class="fas fa-certificate"></i></div>
+					<div style="flex:1">
+						<div class="doc-name">KLCBC Affiliation Letter</div>
+						<div class="doc-meta">PDF · 180 KB</div>
+					</div>
+					<a href="#" class="doc-dl"><i class="fas fa-download"></i></a>
+				</div>
+
+				<div class="sub-box">
+					<label>Get Circular Alerts</label>
+					<div class="sub-row-inp">
+						<input type="email" id="subEmail" placeholder="your@email.com">
+						<button onclick="subscribe()">Subscribe</button>
+					</div>
+					<p id="subMsg"></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- GALLERY -->
+	<section id="gallery" class="gallery-sec">
+		<div class="container">
+			<div class="gallery-header">
+				<div>
+					<p class="sec-eyebrow">Moments &amp; Memories</p>
+					<h2 class="sec-title">Photo <em>Gallery</em></h2>
+				</div>
+				<a href="#" class="btn-red" style="font-size:11px;padding:11px 24px;white-space:nowrap">
+					<i class="fas fa-images" style="margin-right:7px"></i>View Full Gallery
+				</a>
+			</div>
+
+			<!-- Tab Bar -->
+			<div class="album-tabs">
+				<button class="album-tab active" onclick="switchAlbum('programs',this)">
+					<i class="fas fa-star"></i> Programs <span class="tab-count">6</span>
+				</button>
+				<button class="album-tab" onclick="switchAlbum('anugraha-vazhiye',this)">
+					<i class="fas fa-running"></i> Anugraha Vazhiyee <span class="tab-count">11</span>
+				</button>
+				<button class="album-tab" onclick="switchAlbum('ymap',this)">
+					<i class="fas fa-users"></i> Y-MAP <span class="tab-count">2</span>
+				</button>
+			</div>
+
+			<!-- ALBUM: Programs -->
+			<div class="gallery-album active" id="album-programs">
+				<div class="album-info">
+					<div class="album-info-left">
+						<div class="album-icon"><i class="fas fa-star"></i></div>
+						<div class="album-title-block">
+							<strong>Programs 2025-26</strong>
+							<span>Destination, Anugraha Vazhiyee, Laahiri &amp; more.</span>
+						</div>
+					</div>
+					<div class="album-meta-tags">
+						<span class="album-tag"><i class="fas fa-calendar-alt"></i> 2025-26</span>
+						<span class="album-tag"><i class="fas fa-images"></i> 6 Photos</span>
+						<span class="album-tag"><i class="fas fa-map-marker-alt"></i> All 12 Dioceses</span>
+					</div>
+				</div>
+				<div class="photo-grid">
+					<div class="photo-item" data-album="programs" data-src="imgs/programs/latin_secrateriate_23-25.jpeg"
+						data-title="KCYM Latin Secretariat 23-25" data-sub="Oath Taking | 10 May 2025"
+						onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/latin_secrateriate_23-25.jpeg" alt="Latin Secretariat 23-25">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">KCYM Latin Secretariat 23-25<small>10th May 2025</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="programs" data-src="imgs/programs/latin_secrateriate_25-27.jpeg"
+						data-title="KCYM Latin Secretariat 25-27" data-sub="Oath Taking | 10 May 2025"
+						onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/latin_secrateriate_25-27.jpeg" alt="Latin Secretariat 25-27">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">KCYM Latin Secretariat 25-27<small>10th May 2025</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="programs" data-src="imgs/programs/blaze_group_photo.jpeg"
+						data-title="BLAZE Group Photo" data-sub="10 May 2025"
+						onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/blaze_group_photo.jpeg" alt="BLAZE Group Photo">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">BLAZE Group Photo<small>10th May 2025</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="programs" data-src="imgs/programs/coastal_issue_2.jpeg"
+						data-title="Coastal Issue Letter" data-sub="28 May 2025"
+						onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/coastal_issue_2.jpeg" alt="Coastal Issue Letter">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Coastal Issue Letter<small>28th May 2025</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="programs" data-src="imgs/programs/post_card_protest.jpeg"
+						data-title="Post Card Protest to Prime Minister" data-sub="9 Aug 2025"
+						onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/post_card_protest.jpeg" alt="Post Card Protest">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Post Card Protest to Prime Minister<small>9th Aug 2025</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="programs" data-src="imgs/programs/nyd_meet.JPG"
+						data-title="National Director's Meet" data-sub="20-21 Aug 20256"
+						onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/nyd_meet.JPG" alt="National Director's Meet">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">National Director's Meet<small>Bareily | 20-21 Aug 2025</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="programs" data-src="imgs/programs/kerala_to_south_korea.jpeg"
+						data-title="Kerala to South Korea" data-sub="Poster Launch | 26 Jan 2026"
+						onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/kerala_to_south_korea.jpeg" alt="Kerala to South Korea">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Kerala to South Korea<small>Bareily | 26th Jan 2026</small></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ALBUM: Y-MAP -->
+			<div class="gallery-album" id="album-ymap">
+				<div class="album-info">
+					<div class="album-info-left">
+						<div class="album-icon" style="background:var(--ink)"><i class="fas fa-users"></i></div>
+						<div class="album-title-block">
+							<strong>Y-MAP Leadership Formation</strong>
+							<span>Youth Missionary Animation Program - Batches 1 &amp; 2.</span>
+						</div>
+					</div>
+					<div class="album-meta-tags">
+						<span class="album-tag"><i class="fas fa-calendar-alt"></i> 2025-26</span>
+						<span class="album-tag"><i class="fas fa-images"></i> 2+ Photos</span>
+						<span class="album-tag"><i class="fas fa-users"></i> 100+ Participants</span>
+					</div>
+				</div>
+				<div class="photo-grid">
+					<div class="photo-item" data-album="y_map" data-src="imgs/programs/y_map/poster_launch.jpg"
+						data-title="Y-MAP Poster Launch" data-sub="KRLCC Assembly | 11 Jan 2026"
+						onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/y_map/poster_launch.jpg" alt="Poster Launch">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Y-MAP Poster Launch<small>11 Jan 2026</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="y_map" data-src="imgs/programs/y_map/batch1.jpeg"
+						data-title="Y-MAP Batch 1" data-sub="Kozhikode | 17-18 Jan 2026" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/y_map/batch1.jpeg" alt="Batch 1">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Y-MAP Batch 1<small>17-18 Jan 2026</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="y_map" data-src="imgs/programs/y_map/batch2.jpeg"
+						data-title="Y-MAP Batch 2" data-sub="Kollam | 14-15 Mar 2026" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/y_map/batch2.jpeg" alt="Batch 2">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Y-MAP Batch 2<small>14-15 Mar 2026</small></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ALBUM: Anugraha Vazhiyee -->
+			<div class="gallery-album" id="album-anugraha-vazhiye">
+				<div class="album-info">
+					<div class="album-info-left">
+						<div class="album-icon" style="background:#1D4ED8"><i class="fas fa-church"></i></div>
+						<div class="album-title-block">
+							<strong>Anugraha Vazhiyee</strong>
+							<span>Journey with relic pilgrimage</span>
+						</div>
+					</div>
+					<div class="album-meta-tags">
+						<span class="album-tag"><i class="fas fa-calendar-alt"></i> Nov 2025 - 2026</span>
+						<span class="album-tag"><i class="fas fa-images"></i> 11 Photos</span>
+						<span class="album-tag"><i class="fas fa-trophy"></i> 11 Dioceses</span>
+					</div>
+				</div>
+				<div class="photo-grid">
+					<div class="photo-item" data-album="anugraha_vazhiye"
+						data-src="imgs/programs/anugraha_vazhiye/kannur.jpeg" data-title="Anugraha Vazhiyee"
+						data-sub="Kannur Diocese | 29 Nov 2025" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/anugraha_vazhiye/kannur.jpeg" alt="Kannur">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Kannur Diocese<small>29th Nov 2025</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="anugraha_vazhiye"
+						data-src="imgs/programs/anugraha_vazhiye/sulthanpet.jpeg" data-title="Anugraha Vazhiyee"
+						data-sub="Sultanpet Diocese | 30 Nov 2025" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/anugraha_vazhiye/sulthanpet.jpeg" alt="Sultanpet">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Sultanpet Diocese<small>30th Nov 2025</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="anugraha_vazhiye"
+						data-src="imgs/programs/anugraha_vazhiye/punalur.jpeg" data-title="Anugraha Vazhiyee"
+						data-sub="Punalur Diocese | 20 Dec 2025" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/anugraha_vazhiye/punalur.jpeg" alt="Punalur">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Punalur Diocese<small>20th Dec 2025</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="anugraha_vazhiye"
+						data-src="imgs/programs/anugraha_vazhiye/vijayapuram.jpeg" data-title="Anugraha Vazhiyee"
+						data-sub="Vijayapuram Diocese | 28 Dec 2025" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/anugraha_vazhiye/vijayapuram.jpeg" alt="Vijayapuram">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Vijayapuram Diocese<small>28th Dec 2025</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="anugraha_vazhiye"
+						data-src="imgs/programs/anugraha_vazhiye/kottapuram.jpeg" data-title="Anugraha Vazhiyee"
+						data-sub="Kottapuram Diocese | 4 Jan 2026" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/anugraha_vazhiye/kottapuram.jpeg" alt="Kottapuram">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Kottapuram Diocese<small>4th Jan 2026</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="anugraha_vazhiye"
+						data-src="imgs/programs/anugraha_vazhiye/kochi.jpeg" data-title="Anugraha Vazhiyee"
+						data-sub="Kochi Diocese | 10 Jan 2026" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/anugraha_vazhiye/kochi.jpeg" alt="Kochi">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Kochi Diocese<small>10th Jan 2026</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="anugraha_vazhiye"
+						data-src="imgs/programs/anugraha_vazhiye/varapuzha.jpeg" data-title="Anugraha Vazhiyee"
+						data-sub="Varapuzha Arch Diocese | 11 Jan 2026" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/anugraha_vazhiye/varapuzha.jpeg" alt="Varapuzha">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Varapuzha Arch Diocese<small>11th Jan 2026</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="anugraha_vazhiye"
+						data-src="imgs/programs/anugraha_vazhiye/kollam.jpeg" data-title="Anugraha Vazhiyee"
+						data-sub="Kollam Diocese | 11 Feb 2026" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/anugraha_vazhiye/kollam.jpeg" alt="Kollam">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Kollam Diocese<small>11th Feb 2026</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="anugraha_vazhiye"
+						data-src="imgs/programs/anugraha_vazhiye/alapuzha.jpeg" data-title="Anugraha Vazhiyee"
+						data-sub="Alapuzha Diocese | 21 Feb 2026" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/anugraha_vazhiye/alapuzha.jpeg" alt="Alapuzha">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Alapuzha Diocese<small>21st Feb 2026</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="anugraha_vazhiye"
+						data-src="imgs/programs/anugraha_vazhiye/trivandrum.jpeg" data-title="Anugraha Vazhiyee"
+						data-sub="Trivandrum Arch Diocese | 21-22 Feb 2026" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/anugraha_vazhiye/trivandrum.jpeg" alt="Trivandrum">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Trivandrum Arch Diocese<small>21-22 Feb 2026</small></div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="anugraha_vazhiye"
+						data-src="imgs/programs/anugraha_vazhiye/neyyatinkara.jpeg" data-title="Anugraha Vazhiyee"
+						data-sub="Neyyattinkara Diocese | 22 Feb 2026" onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/anugraha_vazhiye/neyyatinkara.jpeg" alt="Neyyattinkara">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Neyyattinkara Diocese<small>22nd Feb 2026</small></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Lightbox -->
+	<div class="lb-bg" id="lbBg" onclick="handleLbClick(event)">
+		<div class="lb-inner">
+			<button class="lb-close" onclick="closeLb()"><i class="fas fa-times"></i></button>
+			<button class="lb-nav lb-prev" onclick="lbNav(-1)"><i class="fas fa-chevron-left"></i></button>
+			<button class="lb-nav lb-next" onclick="lbNav(1)"><i class="fas fa-chevron-right"></i></button>
+			<img class="lb-img" id="lbImg" src="" alt="">
+			<div class="lb-caption">
+				<div><strong id="lbTitle"></strong><span id="lbSub"></span></div>
+				<div class="lb-counter" id="lbCounter"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- SERVICES -->
+	<section id="services" class="services-sec">
+		<div class="container">
+			<div class="services-header">
+				<div>
+					<p class="sec-eyebrow">What We Offer</p>
+					<h2 class="sec-title">Our <em>Services</em></h2>
+					<p class="services-desc">Spiritual, social, educational and leadership services offered by KCYM
+						Latin State for Catholic youth across all 12 dioceses of Kerala.</p>
+				</div>
+				<a href="#contact" class="btn-red" style="font-size:11px;padding:11px 24px;white-space:nowrap">
+					<i class="fas fa-paper-plane" style="margin-right:7px"></i>Request a Service
+				</a>
+			</div>
+
+			<!-- Filter Pills -->
+			<div class="svc-filters">
+				<button class="svc-filter-btn active" onclick="filterSvc('all',this)">All Services</button>
+				<button class="svc-filter-btn" onclick="filterSvc('spiritual',this)">Spiritual</button>
+			</div>
+
+			<!-- Grid -->
+			<div class="svc-grid" id="svcGrid">
+				<div class="svc-card" data-cat="spiritual">
+					<div class="svc-icon"><i class="fas fa-praying-hands"></i></div>
+					<div class="svc-cat-tag">Spiritual</div>
+					<div class="svc-name">Anugraha Vazhiyee Retreats</div>
+					<div class="svc-desc">Annual relic-pilgrimage and retreat experiences deepening faith identity among
+						youth.</div>
+					<ul class="svc-bullet-list">
+						<li>Journey with 100+ relics of saints</li>
+						<li>Adoration, confession &amp; Holy Mass</li>
+						<li>Youth testimonial sessions</li>
+					</ul>
+					<div class="svc-card-footer">
+						<div class="svc-status"><span class="svc-dot svc-dot-up"></span> Upcoming 2026</div>
+						<a href="#contact" class="svc-link">Register <i class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+				<div class="svc-card" data-cat="spiritual">
+					<div class="svc-icon"><i class="fas fa-praying-hands"></i></div>
+					<div class="svc-cat-tag">Spiritual</div>
+					<div class="svc-name">Anugraha Vazhiyee Retreats</div>
+					<div class="svc-desc">Annual relic-pilgrimage and retreat experiences deepening faith identity among
+						youth.</div>
+					<ul class="svc-bullet-list">
+						<li>Journey with 100+ relics of saints</li>
+						<li>Adoration, confession &amp; Holy Mass</li>
+						<li>Youth testimonial sessions</li>
+					</ul>
+					<div class="svc-card-footer">
+						<div class="svc-status"><span class="svc-dot svc-dot-up"></span> Upcoming 2026</div>
+						<a href="#contact" class="svc-link">Register <i class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- DIOCESES -->
+	<section id="dioceses" class="dio-sec">
+		<div class="container">
+			<div class="dio-header">
+				<div>
+					<p class="sec-eyebrow">Member Units</p>
+					<h2 class="sec-title">Affiliated <em>Dioceses</em></h2>
+				</div>
+				<p class="dio-desc">All 12 Latin Rite dioceses of Kerala under KLCBC are represented through KCYM Latin
+					State.</p>
+			</div>
+			<div class="dio-grid">
+				<div class="dio-card" onclick="dioClick('Trivandrum')">
+					<div class="dio-num">01</div>
+					<div class="dio-name">Trivandrum</div>
+				</div>
+				<div class="dio-card" onclick="dioClick('Neyyattinkara')">
+					<div class="dio-num">02</div>
+					<div class="dio-name">Neyyattinkara</div>
+				</div>
+				<div class="dio-card" onclick="dioClick('Quilon')">
+					<div class="dio-num">03</div>
+					<div class="dio-name">Quilon</div>
+				</div>
+				<div class="dio-card" onclick="dioClick('Punalur')">
+					<div class="dio-num">04</div>
+					<div class="dio-name">Punalur</div>
+				</div>
+				<div class="dio-card" onclick="dioClick('Vijayapuram')">
+					<div class="dio-num">05</div>
+					<div class="dio-name">Vijayapuram</div>
+				</div>
+				<div class="dio-card" onclick="dioClick('Alleppey')">
+					<div class="dio-num">06</div>
+					<div class="dio-name">Alleppey</div>
+				</div>
+				<div class="dio-card" onclick="dioClick('Verapoly')">
+					<div class="dio-num">07</div>
+					<div class="dio-name">Verapoly</div>
+				</div>
+				<div class="dio-card" onclick="dioClick('Cochin')">
+					<div class="dio-num">08</div>
+					<div class="dio-name">Cochin</div>
+				</div>
+				<div class="dio-card" onclick="dioClick('Kottapuram')">
+					<div class="dio-num">09</div>
+					<div class="dio-name">Kottapuram</div>
+				</div>
+				<div class="dio-card" onclick="dioClick('Sultanpet')">
+					<div class="dio-num">10</div>
+					<div class="dio-name">Sultanpet</div>
+				</div>
+				<div class="dio-card" onclick="dioClick('Calicut')">
+					<div class="dio-num">11</div>
+					<div class="dio-name">Calicut</div>
+				</div>
+				<div class="dio-card" onclick="dioClick('Kannur')">
+					<div class="dio-num">12</div>
+					<div class="dio-name">Kannur</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- LEADERSHIP -->
+	<section id="leadership" class="lead-sec">
+		<div class="container">
+			<p class="sec-eyebrow">State Secretariat</p>
+			<h2 class="sec-title">Our <em>Leadership</em></h2>
+			<div class="lead-grid">
+				<div class="lead-card">
+					<div class="lead-avatar">
+						<img src="imgs/secretariat/paul_jose.jpg" alt="President">
+					</div>
+					<div class="lead-role">President</div>
+					<div class="lead-name">Mr. Paul Jose</div>
+				</div>
+				<div class="lead-card">
+					<div class="lead-avatar">
+						<img src="imgs/secretariat/sherin_kr.jpg" alt="General Secretary">
+					</div>
+					<div class="lead-role">General Secretary</div>
+					<div class="lead-name">Mr. Sherin K R</div>
+				</div>
+				<div class="lead-card">
+					<div class="lead-avatar">
+						<img src="imgs/secretariat/akshay_alex.jpg" alt="Vice President">
+					</div>
+					<div class="lead-role">Vice President</div>
+					<div class="lead-name">Mr. Akshay Alex</div>
+				</div>
+				<div class="lead-card">
+					<div class="lead-avatar">
+						<img src="imgs/secretariat/aleena_george.jpg" alt="Secretary">
+					</div>
+					<div class="lead-role">Secretary</div>
+					<div class="lead-name">Ms. Aleena George</div>
+				</div>
+				<div class="lead-card">
+					<div class="lead-avatar">
+						<img src="imgs/secretariat/vimin_m_vincent.jpg" alt="Secretary">
+					</div>
+					<div class="lead-role">Secretary</div>
+					<div class="lead-name">Mr. Vimin M vincent</div>
+				</div>
+				<div class="lead-card">
+					<div class="lead-avatar">
+						<img src="imgs/secretariat/aneesh_ls.jpg" alt="Treasurer">
+					</div>
+					<div class="lead-role">Treasurer</div>
+					<div class="lead-name">Mr. Aneesh L S</div>
+				</div>
+				<div class="lead-card">
+					<div class="lead-avatar">
+						<img src="imgs/secretariat/anoop_kalathithara.jpg" alt="Director">
+					</div>
+					<div class="lead-role">Director</div>
+					<div class="lead-name">Rev. Fr. Anoop Kalathithara OSJ</div>
+				</div>
+				<div class="lead-card">
+					<div class="lead-avatar">
+						<img src="imgs/secretariat/melna_dcotha.jpg" alt="Animator">
+					</div>
+					<div class="lead-role">Animator</div>
+					<div class="lead-name">Sr. Melna D'Cotha</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- AFFILIATIONS -->
+	<div class="aff-bar">
+		<div class="aff-inner">
+			<div class="aff-lbl">Affiliated With</div>
+			<div class="aff-list">
+				<span class="aff-item"><span class="aff-dot"></span>KLCBC</span>
+				<span class="aff-item"><span class="aff-dot"></span>KCBC Youth Commission</span>
+				<span class="aff-item"><span class="aff-dot"></span>ICYM National</span>
+				<span class="aff-item"><span class="aff-dot"></span>FIMCAP International</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- CONTACT -->
+	<section id="contact" class="contact-sec">
+		<div class="contact-inner">
+			<div class="contact-left">
+				<p class="sec-eyebrow">Reach Out</p>
+				<h2>Get in <em>Touch</em></h2>
+				<p>Have a question, want to connect with your diocesan unit, or interested in volunteering? Reach out to
+					the KCYM Latin State Committee.</p>
+				<div class="c-rows">
+					<div class="c-row">
+						<div class="c-ico"><i class="fas fa-map-marker-alt"></i></div>
+						<div class="c-text">
+							<strong>Address</strong>
+							<span>
+								KCYM Latin State Office,
+								KRLCC Secretariat,
+								P.B. No. 620, U.C. College P.O., Aluva - 683102,
+								Ernakulam District, Kerala, India
+							</span>
+						</div>
+					</div>
+					<div class="c-row">
+						<div class="c-ico"><i class="fas fa-envelope"></i></div>
+						<div class="c-text">
+							<strong>Email</strong>
+							<span>kcymlatinofficial@gmail.com</span>
+						</div>
+					</div>
+					<div class="c-row">
+						<div class="c-ico"><i class="fas fa-phone"></i></div>
+						<div class="c-text">
+							<strong>Phone</strong>
+							<span>+91 75599 22829</span>
+						</div>
+					</div>
+				</div>
+				<div class="socials">
+					<a href="https://facebook.com/kcymlatin" class="social-a"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://instagram.com/kcymlatinstate" class="social-a"><i class="fab fa-instagram"></i></a>
+					<a href="https://api.whatsapp.com/send/?phone=917559922829&text=Hi+From+KCYM+Latin+Website"
+						class="social-a"><i class="fab fa-whatsapp"></i></a>
+					<a href="https://www.youtube.com/@kcymlatinstate9785" class="social-a"><i
+							class="fab fa-youtube"></i></a>
+				</div>
+			</div>
+
+			<div class="c-form">
+				<h3>Send a Message</h3>
+				<div id="contactForm">
+					<div class="f-row">
+						<div class="f-group"><label>First Name</label><input type="text" id="fName" placeholder="John">
+						</div>
+						<div class="f-group"><label>Last Name</label><input type="text" placeholder="Doe"></div>
+					</div>
+					<div class="f-group"><label>Email</label><input type="email" id="fEmail"
+							placeholder="you@example.com"></div>
+					<div class="f-group">
+						<label>Diocese</label>
+						<select id="fDio">
+							<option value="">Select diocese</option>
+							<option>Trivandrum</option>
+							<option>Neyyattinkara</option>
+							<option>Quilon</option>
+							<option>Punalur</option>
+							<option>Vijayapuram</option>
+							<option>Alleppey</option>
+							<option>Cochin</option>
+							<option>Verapoly</option>
+							<option>Kottapuram</option>
+							<option>Sultanpet</option>
+							<option>Calicut</option>
+							<option>Kannur</option>
+						</select>
+					</div>
+					<div class="f-group"><label>Message</label><textarea id="fMsg"
+							placeholder="How can we help?"></textarea></div>
+					<button class="f-submit" onclick="sendForm()"><i class="fas fa-paper-plane"></i> Send
+						Message</button>
+				</div>
+				<div class="f-success" id="fSuccess">
+					<div class="f-success-icon"><i class="fas fa-check"></i></div>
+					<p>Message sent!<br><small>We'll get back to you soon.</small></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<div class="foot-accent"></div>
+	<footer>
+		<div class="foot-inner">
+			<div class="foot-top">
+				<div class="foot-brand">
+					<strong>KCYM Latin State</strong>
+					<span>Kerala Catholic Youth Movement</span>
+					<p>"To Change, To Lead, To Serve"</p>
+				</div>
+				<div class="foot-col">
+					<h4>Quick Links</h4>
+					<a href="#programs">Programs</a>
+					<a href="#news">News & Updates</a>
+					<a href="#gallery">Gallery</a>
+					<a href="#services">Services</a>
+					<a href="#dioceses">Dioceses</a>
+					<a href="#leadership">Leadership</a>
+				</div>
+				<div class="foot-col">
+					<h4>Resources</h4>
+					<a href="#">Membership Form 2026</a>
+					<a href="#">KCYM Constitution</a>
+					<a href="#">State Calendar</a>
+					<a href="#">Affiliation Letter</a>
+				</div>
+			</div>
+			<div class="foot-bottom">
+				<p>© 2026 KCYM Latin State Committee, Kerala · Under KLCBC</p>
+				<div class="foot-socials">
+					<a href="https://facebook.com/kcymlatin" class="social-a"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://instagram.com/kcymlatinstate" class="social-a"><i class="fab fa-instagram"></i></a>
+					<a href="https://api.whatsapp.com/send/?phone=917559922829&text=Hi+From+KCYM+Latin+Website"
+						class="social-a"><i class="fab fa-whatsapp"></i></a>
+					<a href="https://www.youtube.com/@kcymlatinstate9785" class="social-a"><i
+							class="fab fa-youtube"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- MODAL -->
+	<div class="modal-bg" id="modalBg" onclick="handleOverlay(event)">
+		<div class="modal-box">
+			<div class="modal-head">
+				<div>
+					<div class="modal-tag" id="mTag"></div>
+					<h3 id="mTitle"></h3>
+				</div>
+				<button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+			</div>
+			<div class="modal-body">
+				<p id="mBody"></p>
+			</div>
+		</div>
+	</div>
+
+	<!-- BACK TO TOP -->
+	<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+	<script>
+		// ── NEWS ──
+		const news = [
+			{ day: '26', mon: 'Feb', cat: 'Official', title: 'State Senate Meeting Minutes Released', blurb: 'The minutes of the 45th State Senate held at Verapoly have been published for all diocese directors.' },
+			{ day: '20', mon: 'Feb', cat: 'Events', title: 'Global Youth Day Celebrations Announced', blurb: 'State committee announces centralized celebrations across all 12 Latin dioceses with a unified theme.' },
+			{ day: '10', mon: 'Feb', cat: 'Programs', title: 'Destination 2026 - Registration Open', blurb: 'Registrations are now open for the Destination 2026. Dioceses must submit entries before March 15.' },
+			{ day: '02', mon: 'Feb', cat: 'Leadership', title: 'Y-MAP Leadership Training - Batch 3 Commences', blurb: 'The third batch of the Y-MAP leadership formation programme began with 80 youth from across Kerala.' },
+			{ day: '25', mon: 'Jan', cat: 'Social', title: 'Harvest Campaign Reaches 200 Families', blurb: "KCYM Latin State's annual Harvest Campaign reached over 200 underprivileged families this season." },
+			{ day: '12', mon: 'Jan', cat: 'Official', title: 'FIMCAP Delegation - Applications Open', blurb: 'Youth interested in representing Kerala at the FIMCAP international meet may apply through diocesan directors.' },
+		];
+		let shown = 3;
+		function renderNews(n) {
+			const el = document.getElementById('newsList');
+			el.innerHTML = '';
+			news.slice(0, n).forEach(x => {
+				el.innerHTML += `<div class="news-card">
+			<div class="news-date-box"><strong>${x.day}</strong><span>${x.mon}</span></div>
+			<div><div class="news-cat">${x.cat}</div><div class="news-title">${x.title}</div><div class="news-blurb">${x.blurb}</div></div>
+		</div>`;
+			});
+			document.getElementById('loadMoreBtn').style.display = n >= news.length ? 'none' : '';
+		}
+		function loadMore() { shown += 3; renderNews(shown); }
+		renderNews(shown);
+
+		// ── MODAL ──
+		const progs = {
+			destination: { tag: 'Annual Cultural Meet', title: 'Destination', body: "The Destination is KCYM Latin State's flagship annual cultural event, bringing together youth from all 12 dioceses to celebrate talent in music, dance, drama, literature, and fine arts. Registrations for 2026 are currently open through diocesan units." },
+			ymap: { tag: 'Leadership Formation', title: 'Y-MAP', body: 'Y-MAP is the state leadership formation programme empowering young Catholics to become effective leaders in their parishes and communities. Batch 3 for 2026 is currently ongoing across multiple dioceses.' },
+			laahiri: { tag: 'Outreach & Service', title: 'Laahiri', body: "KCYM Latin State's Social Action wing runs the Harvest Campaign, blood donation drives, disaster relief, environmental campaigns, and support for marginalised communities — embodying the call to 'serve'." },
+			anugraha_vazhiye: { tag: 'Spiritual Formation', title: 'Anugraha Vazhiyee', body: 'The Annual Anugraha Vazhiyee provides a space of prayer, reflection, and renewal. Held across various anugraha_vazhiye centres in Kerala, it deepens the faith and identity of Catholic youth.' },
+		};
+		function openModal(k) {
+			const p = progs[k];
+			document.getElementById('mTag').textContent = p.tag;
+			document.getElementById('mTitle').textContent = p.title;
+			document.getElementById('mBody').textContent = p.body;
+			document.getElementById('modalBg').classList.add('open');
+			document.body.style.overflow = 'hidden';
+		}
+		function closeModal() {
+			document.getElementById('modalBg').classList.remove('open');
+			document.body.style.overflow = '';
+		}
+		function handleOverlay(e) { if (e.target === document.getElementById('modalBg')) closeModal(); }
+		document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+		// ── DIOCESE ──
+		function dioClick(n) { alert(`Diocese of ${n}\n\nContact your diocesan KCYM director for local events and unit details.`); }
+
+		// ── FORM ──
+		function sendForm() {
+			const name = document.getElementById('fName').value.trim();
+			const email = document.getElementById('fEmail').value.trim();
+			const msg = document.getElementById('fMsg').value.trim();
+			if (!name || !email || !msg) { alert('Please fill in your name, email, and message.'); return; }
+			document.getElementById('contactForm').style.display = 'none';
+			document.getElementById('fSuccess').style.display = 'block';
+		}
+
+		// ── SUBSCRIBE ──
+		function subscribe() {
+			const inp = document.getElementById('subEmail');
+			const msg = document.getElementById('subMsg');
+			if (!inp.value.trim() || !inp.value.includes('@')) {
+				msg.textContent = 'Please enter a valid email.'; msg.style.color = 'var(--red)'; msg.style.display = 'block'; return;
+			}
+			msg.textContent = '✓ Subscribed! You\'ll receive updates.'; msg.style.color = 'green'; msg.style.display = 'block';
+			inp.value = '';
+		}
+
+		// ── MOBILE ──
+		function toggleMob() { document.getElementById('mobMenu').classList.toggle('open'); }
+		function closeMob() { document.getElementById('mobMenu').classList.remove('open'); }
+
+		// ── BACK TO TOP ──
+		window.addEventListener('scroll', () => {
+			document.getElementById('btt').classList.toggle('show', window.scrollY > 400);
+		});
+
+		// ── GALLERY: switch album ──
+		function switchAlbum(id, btn) {
+			document.querySelectorAll('.gallery-album').forEach(a => a.classList.remove('active'));
+			document.querySelectorAll('.album-tab').forEach(b => b.classList.remove('active'));
+			document.getElementById('album-' + id).classList.add('active');
+			btn.classList.add('active');
+		}
+
+		// ── LIGHTBOX ──
+		function openLb(album, idx) {
+			lbAlbum = album; lbIdx = idx;
+			renderLb();
+			document.getElementById('lbBg').classList.add('open');
+			document.body.style.overflow = 'hidden';
+		}
+		function closeLb() {
+			document.getElementById('lbBg').classList.remove('open');
+			document.body.style.overflow = '';
+		}
+		function lbNav(dir) {
+			lbIdx = (lbIdx + dir + currentItems.length) % currentItems.length;
+			renderLb();
+		}
+
+		function handleLbClick(e) { if (e.target === document.getElementById('lbBg')) closeLb(); }
+		document.addEventListener('keydown', e => {
+			if (!document.getElementById('lbBg').classList.contains('open')) return;
+			if (e.key === 'ArrowRight') lbNav(1);
+			if (e.key === 'ArrowLeft') lbNav(-1);
+			if (e.key === 'Escape') { closeLb(); closeModal(); }
+		});
+
+		let currentItems = [];
+		let lbIdx = 0;
+
+		function openLbFromHtml(el) {
+			const album = el.dataset.album;
+
+			currentItems = [...document.querySelectorAll(`.photo-item[data-album="${album}"]`)];
+			lbIdx = currentItems.indexOf(el);
+
+			renderLb();
+
+			document.getElementById('lbBg').classList.add('open');
+			document.body.style.overflow = 'hidden';
+		}
+
+		function renderLb() {
+			const img = document.getElementById('lbImg');
+			img.style.opacity = 0;
+			setTimeout(() => {
+				const el = currentItems[lbIdx];
+				img.src = el.dataset.src;
+				document.getElementById('lbTitle').textContent = el.dataset.title;
+				document.getElementById('lbSub').textContent = el.dataset.sub;
+				document.getElementById('lbCounter').textContent =
+					(lbIdx + 1) + ' / ' + currentItems.length;
+
+				img.style.opacity = 1;
+			}, 150);
+		}
+
+		document.querySelectorAll('.photo-item').forEach(item => {
+			item.addEventListener('click', () => openLbFromHtml(item));
+		});
+
+		// ── SERVICES: filter ──
+		function filterSvc(cat, btn) {
+			document.querySelectorAll('.svc-filter-btn').forEach(b => b.classList.remove('active'));
+			btn.classList.add('active');
+			document.querySelectorAll('#svcGrid .svc-card').forEach(function (card) {
+				if (cat === 'all' || card.dataset.cat === cat) card.classList.remove('svc-hidden');
+				else card.classList.add('svc-hidden');
+			});
+		}
+	</script>
+</body>
+
+</html>
