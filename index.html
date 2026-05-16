@@ -152,7 +152,7 @@
 					<div class="prog-body">
 						<span class="prog-tag">Spiritual</span>
 						<h4 class="prog-title">Anugraha Vazhiyee</h4>
-						<p class="prog-sub">Journy with 100+ Relics</p>
+						<p class="prog-sub">Journey with 100+ Relics</p>
 					</div>
 				</div>
 				<div class="prog-card" onclick="openModal('laahiri')">
@@ -165,12 +165,12 @@
 						<p class="prog-sub">Campaign against Drug </p>
 					</div>
 				</div>
-				<div class="prog-card prog-cta"
+				<!-- <div class="prog-card prog-cta"
 					onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
 					<i class="fas fa-plus-circle"></i>
 					<div class="prog-cta-title">Propose a Program</div>
 					<div class="prog-cta-sub">Submit to the State Committee</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>
@@ -295,15 +295,15 @@
 					<p class="sec-eyebrow">Moments &amp; Memories</p>
 					<h2 class="sec-title">Photo <em>Gallery</em></h2>
 				</div>
-				<a href="#" class="btn-red" style="font-size:11px;padding:11px 24px;white-space:nowrap">
+				<!-- <a href="#" class="btn-red" style="font-size:11px;padding:11px 24px;white-space:nowrap">
 					<i class="fas fa-images" style="margin-right:7px"></i>View Full Gallery
-				</a>
+				</a> -->
 			</div>
 
 			<!-- Tab Bar -->
 			<div class="album-tabs">
 				<button class="album-tab active" onclick="switchAlbum('programs',this)">
-					<i class="fas fa-star"></i> Programs <span class="tab-count">6</span>
+					<i class="fas fa-star"></i> Programs <span class="tab-count">10+</span>
 				</button>
 				<button class="album-tab" onclick="switchAlbum('anugraha-vazhiye',this)">
 					<i class="fas fa-running"></i> Anugraha Vazhiyee <span class="tab-count">11</span>
@@ -325,7 +325,7 @@
 					</div>
 					<div class="album-meta-tags">
 						<span class="album-tag"><i class="fas fa-calendar-alt"></i> 2025-27</span>
-						<span class="album-tag"><i class="fas fa-images"></i> 6 Photos</span>
+						<span class="album-tag"><i class="fas fa-images"></i> 10 Photos</span>
 						<span class="album-tag"><i class="fas fa-map-marker-alt"></i> All 12 Dioceses</span>
 					</div>
 				</div>
@@ -402,6 +402,15 @@
 						<img src="imgs/programs/kerala_to_south_korea.jpeg" alt="Kerala to South Korea">
 						<div class="photo-overlay">
 							<div class="photo-overlay-label">Kerala to South Korea<small>Bareily | 26th Jan 2026</small>
+							</div>
+						</div>
+					</div>
+					<div class="photo-item" data-album="programs" data-src="imgs/programs/pentecost_novena.png"
+						data-title="Pentecost Novena" data-sub="Online | 15 May 2026"
+						onclick="openLbFromHtml(this)">
+						<img src="imgs/programs/pentecost_novena.png" alt="Pentecost Novena">
+						<div class="photo-overlay">
+							<div class="photo-overlay-label">Pentecost Novena by ICYM<small>Online | 15th May 2026</small>
 							</div>
 						</div>
 					</div>
@@ -592,6 +601,7 @@
 				<button class="svc-filter-btn active" onclick="filterSvc('all',this)">All Services</button>
 				<button class="svc-filter-btn" onclick="filterSvc('spiritual',this)">Spiritual</button>
 				<button class="svc-filter-btn" onclick="filterSvc('social',this)">Social</button>
+				<button class="svc-filter-btn" onclick="filterSvc('educational',this)">Educational</button>
 			</div>
 
 			<!-- Grid -->
@@ -640,6 +650,23 @@
 						<div class="svc-status"><span class="svc-dot svc-dot-up"></span> Upcoming 2026</div>
 						<a href="https://forms.gle/x5aLwRXDX8jJ5pSU9" target="_blank" class="svc-link">Register <i
 								class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+				<div class="svc-card" data-cat="educational">
+					<div class="svc-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+					<div class="svc-cat-tag">Educational</div>
+					<div class="svc-name">Edu for Care</div>
+					<div class="svc-desc">Education for Career Program</div>
+					<ul class="svc-bullet-list">
+						<li>In association with Don Bosco Tech Society</li>
+						<li>Free training courses were launched.</li>
+						<li>NSDC certified courses of three months duration for unemployed youth.</li>
+						<li>13 participants successfully completed the course from the last batch.</li>
+					</ul>
+					<div class="svc-card-footer">
+						<div class="svc-status"><span class="svc-dot svc-dot-on"></span> Ongoing</div>
+						<a href="https://docs.google.com/forms/d/e/1FAIpQLSdD4YeZXt4CJ7NDSV8s9kShMbQ587f9mNnWvSkanSovzrtL2g/viewform"
+							target="_blank" class="svc-link">Register Now<i class="fas fa-arrow-right"></i></a>
 					</div>
 				</div>
 			</div>
@@ -1217,7 +1244,7 @@
 				</div>
 			</div>
 
-			<div class="c-form">
+			<div class="c-form" hidden>
 				<h3>Send a Message</h3>
 				<div id="contactForm">
 					<div class="f-row">
@@ -1274,6 +1301,7 @@
 					<a href="#news">News & Updates</a>
 					<a href="#gallery">Gallery</a>
 					<a href="#services">Services</a>
+					<a href="#history">History</a>
 					<a href="#dioceses">Dioceses</a>
 					<a href="#leadership">Leadership</a>
 				</div>
@@ -1343,10 +1371,10 @@
 
 		// ── MODAL ──
 		const progs = {
-			destination: { tag: 'Annual Cultural Meet', title: 'Destination', body: "The Destination is KCYM Latin State's flagship annual cultural event, bringing together youth from all 12 dioceses to celebrate talent in music, dance, drama, literature, and fine arts. Registrations for 2026 are currently open through diocesan units." },
-			ymap: { tag: 'Leadership Formation', title: 'Y-MAP', body: 'Y-MAP is the state leadership formation programme empowering young Catholics to become effective leaders in their parishes and communities. Batch 3 for 2026 is currently ongoing across multiple dioceses.' },
-			laahiri: { tag: 'Outreach & Service', title: 'Laahiri', body: "KCYM Latin State's Social Action wing runs the Harvest Campaign, blood donation drives, disaster relief, environmental campaigns, and support for marginalised communities - embodying the call to 'serve'." },
-			anugraha_vazhiye: { tag: 'Spiritual Formation', title: 'Anugraha Vazhiyee', body: 'The Annual Anugraha Vazhiyee provides a space of prayer, reflection, and renewal. Held across various anugraha_vazhiye centres in Kerala, it deepens the faith and identity of Catholic youth.' },
+			destination: { tag: 'Annual Cultural Meet', title: 'Destination', body: "Destination - Career Guidance Trainers Workshop is an initiative by the KCYM Latin State Committee aimed at equipping trainers from 12 Latin dioceses across Kerala with effective career guidance skills. The workshop focuses on empowering leaders to mentor and support young people in making informed academic and career decisions while strengthening a statewide network of trained career guidance facilitators." },
+			ymap: { tag: 'Leadership Formation', title: 'Y-MAP', body: "Y-MAP (Youth Missionary Animation Program) is a leadership formation initiative by the KCYM Latin State Committee designed to empower youth through missionary animation, leadership training, and personal development. The program includes multiple levels of training sessions and follow-up activities aimed at nurturing responsible leaders who can actively contribute to the Church and society while strengthening youth engagement across the Latin dioceses in Kerala." },
+			laahiri: { tag: 'Outreach & Service', title: 'Laahiri', body: "Laahiri is an anti-drug abuse campaign initiated by the KCYM Latin State Committee in connection with the International Day Against Drug Abuse and Illicit Trafficking. The campaign aims to create awareness among youth and society about the dangers of substance abuse through various impactful activities such as video campaigns, reels competitions, public rallies, awareness programs, and community engagements. Through multiple levels of participation, Laahiri encourages young people to promote a healthy, value-based, and drug-free lifestyle." },
+			anugraha_vazhiye: { tag: 'Spiritual Formation', title: 'Anugraha Vazhiyee', body: "Anugraha Vazhiye is a spiritual journey initiative organized by the KCYM Latin State Committee across all Latin dioceses in Kerala, carrying more than 100 relics of Saints and Blesseds. The program aims to inspire and guide youth by introducing the lives and values of Saints as true role models and heroes for today’s generation. Through prayer gatherings, veneration, and youth-centered programs, Anugraha Vazhiye encourages young people to grow in faith, values, and spiritual leadership while rediscovering holiness as a path for modern life." },
 		};
 		function openModal(k) {
 			const p = progs[k];
