@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLESS - Blood Lending for Every Soul's Safety | KCYM Latin State</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ── TOKENS matching kcymlatin.org ── */
+        :root {
+            --navy: #0B1120;
+            --navy2: #111827;
+            --red: #DC2626;
+            --red2: #B91C1C;
+            --gold: #F59E0B;
+            --white: #FFFFFF;
+            --off: #F9FAFB;
+            --muted: #6B7280;
+            --border: #E5E7EB;
+            --radius: 12px;
+            --ff-display: 'Playfair Display', Georgia, serif;
+            --ff-body: 'Inter', system-ui, sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--ff-body);
+            background: #fff;
+            color: var(--navy);
+        }
+
+        /* ── NAV ── */
+        nav {
+            background: var(--navy);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 62px;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-badge {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .nav-brand-text strong {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.3px;
+            line-height: 1.1;
+        }
+
+        .nav-brand-text span {
+            font-size: 0.68rem;
+            color: rgba(255, 255, 255, 0.45);
+            font-weight: 300;
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 0.78rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover {
+            color: #fff;
+        }
+
+        .nav-back svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: var(--navy2);
+            position: relative;
+            overflow: hidden;
+            padding: 72px 24px 64px;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(220, 38, 38, 0.18) 0%, transparent 70%);
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(220, 38, 38, 0.15);
+            border: 1px solid rgba(220, 38, 38, 0.35);
+            color: #FCA5A5;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 30px;
+            margin-bottom: 28px;
+            position: relative;
+        }
+
+        .hero-tag .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--red);
+            border-radius: 50%;
+            animation: pulse 1.8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1)
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: scale(0.7)
+            }
+        }
+
+        .hero h1 {
+            font-family: var(--ff-display);
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--red);
+        }
+
+        .hero-sub {
+            font-family: var(--ff-display);
+            font-size: clamp(0.95rem, 2vw, 1.15rem);
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 12px;
+            position: relative;
+        }
+
+        .hero-acronym {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 36px;
+            position: relative;
+        }
+
+        .acro-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 10px 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .acro-letter {
+            font-family: var(--ff-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--red);
+            line-height: 1;
+        }
+
+        .acro-word {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 48px;
+            padding-top: 36px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-family: var(--ff-display);
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .stat-num span {
+            color: var(--red);
+        }
+
+        .stat-label {
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ── SECTION WRAPPER ── */
+        section {
+            padding: 60px 24px;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: var(--ff-display);
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+        }
+
+        .section-title em {
+            font-style: italic;
+            color: var(--red);
+        }
+
+        /* ── FILTER SECTION ── */
+        #search {
+            background: var(--off);
+        }
+
+        .filter-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-top: 32px;
+            box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr auto;
+            gap: 16px;
+            align-items: end;
+        }
+
+        @media(max-width:768px) {
+            .filter-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .filter-action {
+                grid-column: 1/-1;
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        @media(max-width:480px) {
+            .filter-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .filter-group label {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .filter-group select {
+            width: 100%;
+            padding: 10px 38px 10px 14px;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-family: var(--ff-body);
+            font-size: 0.875rem;
+            color: var(--navy);
+            background-color: var(--off);
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 13px center;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .filter-group select:focus {
+            border-color: var(--red);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+            background-color: #fff;
+        }
+
+        .filter-action {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .btn-apply {
+            padding: 10px 26px;
+            background: var(--red);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-family: var(--ff-body);
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            white-space: nowrap;
+        }
+
+        .btn-apply:hover {
+            background: var(--red2);
+        }
+
+        .btn-apply:active {
+            transform: scale(0.97);
+        }
+
+        .btn-reset {
+            padding: 10px 18px;
+            background: none;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-family: var(--ff-body);
+            font-size: 0.82rem;
+            color: var(--muted);
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-reset:hover {
+            border-color: var(--red);
+            color: var(--red);
+        }
+
+        /* ── RESULTS ── */
+        .results-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 24px 0 14px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .results-count {
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
+        .results-count strong {
+            color: var(--red);
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        /* ── TABLE ── */
+        .table-wrap {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 1px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        thead {
+            background: var(--navy);
+        }
+
+        thead th {
+            padding: 13px 16px;
+            text-align: left;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.75);
+            white-space: nowrap;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border);
+            transition: background 0.12s;
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: #FEF2F2;
+        }
+
+        tbody td {
+            padding: 13px 16px;
+            color: var(--muted);
+            vertical-align: middle;
+        }
+
+        .td-name {
+            color: var(--navy);
+            font-weight: 600;
+            font-size: 0.88rem;
+        }
+
+        .td-sno {
+            color: #D1D5DB;
+            font-size: 0.78rem;
+            font-weight: 400;
+        }
+
+        .blood-badge {
+            display: inline-block;
+            background: var(--red);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 11px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .diocese-pill {
+            display: inline-block;
+            background: #FEF2F2;
+            color: var(--red2);
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            border: 1px solid #FECACA;
+            font-weight: 500;
+        }
+
+        .district-pill {
+            display: inline-block;
+            background: #F3F4F6;
+            color: #374151;
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .td-mobile a {
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.84rem;
+        }
+
+        .td-mobile a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── STATES ── */
+        .state-box {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 64px 24px;
+            text-align: center;
+        }
+
+        .state-box .ico {
+            font-size: 2.8rem;
+            margin-bottom: 14px;
+        }
+
+        .state-box h3 {
+            font-family: var(--ff-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--navy);
+        }
+
+        .state-box p {
+            font-size: 0.84rem;
+            color: var(--muted);
+            max-width: 320px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .loading-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 56px;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-top-color: var(--red);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            flex-shrink: 0;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ── PAGINATION ── */
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 20px;
+            border-top: 1px solid var(--border);
+            flex-wrap: wrap;
+        }
+
+        .pg-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 7px;
+            border: 1.5px solid var(--border);
+            background: none;
+            font-family: var(--ff-body);
+            font-size: 0.82rem;
+            cursor: pointer;
+            color: var(--muted);
+            transition: all 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pg-btn:hover:not(:disabled) {
+            border-color: var(--red);
+            color: var(--red);
+        }
+
+        .pg-btn.active {
+            background: var(--red);
+            border-color: var(--red);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .pg-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--navy2);
+            padding: 36px 24px;
+            text-align: center;
+        }
+
+        footer .f-logo {
+            font-family: var(--ff-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        footer .f-logo em {
+            font-style: italic;
+            color: var(--red);
+        }
+
+        footer p {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.35);
+            line-height: 1.7;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        .error-banner {
+            background: #FEF2F2;
+            border: 1px solid #FECACA;
+            color: var(--red2);
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-size: 0.84rem;
+            margin-top: 20px;
+            display: none;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a class="nav-brand" href="https://kcymlatin.org/">
+                <div class="nav-badge">
+                    <img src="../imgs/kcym_logo.png" alt="KCYM Logo">
+                </div>
+                <div class="nav-brand-text">
+                    <strong>KCYM Latin State</strong>
+                    <span>Kerala Catholic Youth Movement</span>
+                </div>
+            </a>
+            <a class="nav-back" href="https://kcymlatin.org/#services">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M10 12L6 8l4-4" />
+                </svg>
+                Back to Services
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-tag"><span class="dot"></span> KCYM Latin State · Social Service</div>
+        <h1>BLESS<br><em>Blood Lending for</em><br><em>Every Soul's Safety</em></h1>
+        <p class="hero-sub">All Kerala Blood Donation Team — Young &amp; Energetic Youths</p>
+
+        <div class="hero-acronym">
+            <div class="acro-item"><span class="acro-letter">B</span><span class="acro-word">Blood</span></div>
+            <div class="acro-item"><span class="acro-letter">L</span><span class="acro-word">Lending for</span></div>
+            <div class="acro-item"><span class="acro-letter">E</span><span class="acro-word">Every</span></div>
+            <div class="acro-item"><span class="acro-letter">S</span><span class="acro-word">Soul's</span></div>
+            <div class="acro-item"><span class="acro-letter">S</span><span class="acro-word">Safety</span></div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-num" id="heroTotal">—</div>
+                <div class="stat-label">Registered Donors</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">12</div>
+                <div class="stat-label">Dioceses</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num"><span>8</span>+</div>
+                <div class="stat-label">Blood Groups</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">24<span>/7</span></div>
+                <div class="stat-label">Always Ready</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEARCH SECTION -->
+    <section id="search">
+        <div class="section-inner">
+            <div class="section-label">Find a Donor</div>
+            <div class="section-title">Search Our <em>Donor Directory</em></div>
+
+            <div class="error-banner" id="errorBanner"></div>
+
+            <div class="filter-card">
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label>Blood Group</label>
+                        <select id="bloodGroupFilter">
+                            <option value="">All Blood Groups</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Diocese</label>
+                        <select id="dioceseFilter">
+                            <option value="">All Dioceses</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>District</label>
+                        <select id="districtFilter">
+                            <option value="">All Districts</option>
+                        </select>
+                    </div>
+                    <div class="filter-action">
+                        <button class="btn-apply" onclick="applyFilters()">Apply Filters</button>
+                        <button class="btn-reset" onclick="resetFilters()">↺ Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-meta">
+                <div class="results-count" id="resultsCount"></div>
+            </div>
+
+            <div id="tableContainer">
+                <div class="state-box">
+                    <div class="loading-row">
+                        <div class="spinner"></div> Loading donor directory...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="f-logo">BLESS — <em>Blood Lending for Every Soul's Safety</em></div>
+        <p>
+            A social initiative by <a href="https://kcymlatin.org/">KCYM Latin State</a> · Kerala Catholic Youth
+            Movement<br>
+            Under Kerala Regional Latin Catholic Bishops' Council (KRLCBC)
+        </p>
+    </footer>
+
+    <script>
+        const SHEET_ID = "1FaKH60YK9VgM6q52ez3lkmWLg0W5RElcua9CugvB4UM";
+        const GID = "1869036480";
+        const GVIZ_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&gid=${GID}`;
+
+        const DISPLAY_COLS = [
+            { keys: ['donor name', 'name', 'full name', 'donor'], label: 'Donor Name', cls: 'td-name' },
+            { keys: ['blood group', 'blood', 'bg', 'bloodgroup'], label: 'Blood Group', cls: 'td-blood' },
+            { keys: ['diocese', 'dioc'], label: 'Diocese', cls: 'td-diocese' },
+            { keys: ['district', 'dist'], label: 'District', cls: 'td-district' },
+            { keys: ['city', 'town', 'place', 'city/town'], label: 'City', cls: 'td-city' },
+            { keys: ['mobile', 'phone', 'contact', 'mob', 'number'], label: 'Mobile Number', cls: 'td-mobile' },
+        ];
+
+        let allData = [], filteredData = [], rawHeaders = [], colMap = {}, currentPage = 1;
+        const PAGE_SIZE = 20;
+
+        function norm(s) { return s?.toString().trim().toLowerCase().replace(/\s+/g, ' ') || ''; }
+        function findColIdx(keys) {
+            for (const k of keys) { const i = rawHeaders.findIndex(h => norm(h).includes(norm(k))); if (i !== -1) return i; }
+            return -1;
+        }
+
+        async function loadData() {
+            try {
+                const res = await fetch(GVIZ_URL);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const text = await res.text();
+                const jsonStr = text.replace(/^[\s\S]*?setResponse\(/, '').replace(/\);\s*$/, '');
+                const json = JSON.parse(jsonStr);
+                const table = json.table;
+
+                rawHeaders = table.cols.map(c => (c.label || c.id || '').trim());
+                DISPLAY_COLS.forEach(col => { colMap[col.label] = findColIdx(col.keys); });
+
+                allData = table.rows.map(row =>
+                    rawHeaders.map((_, i) => {
+                        const cell = row.c?.[i];
+                        if (!cell) return '';
+                        if (cell.f != null) return cell.f;
+                        if (cell.v != null) return String(cell.v);
+                        return '';
+                    })
+                ).filter(r => r.some(v => String(v).trim()));
+
+                populateFilters();
+                filteredData = [...allData];
+                const total = allData.length;
+                document.getElementById('heroTotal').textContent = total;
+                renderTable();
+            } catch (err) {
+                showError('Could not load donor data: ' + err.message + '. Server not reachable.');
+                document.getElementById('tableContainer').innerHTML = `
+      <div class="state-box"><div class="ico">⚠️</div><h3>Unable to Load Data</h3></div>`;
+            }
+        }
+
+        function showError(msg) {
+            const b = document.getElementById('errorBanner');
+            b.textContent = msg; b.style.display = 'block';
+        }
+
+        function getUnique(label) {
+            const idx = colMap[label];
+            if (idx === -1 || idx == null) return [];
+            return [...new Set(allData.map(r => String(r[idx]).trim()).filter(Boolean))].sort();
+        }
+
+        function populateFilters() {
+            const fill = (id, vals) => { const sel = document.getElementById(id); vals.forEach(v => { const o = document.createElement('option'); o.value = v; o.textContent = v; sel.appendChild(o); }); };
+            fill('bloodGroupFilter', getUnique('Blood Group'));
+            fill('dioceseFilter', getUnique('Diocese'));
+            fill('districtFilter', getUnique('District'));
+        }
+
+        function applyFilters() {
+            const bg = document.getElementById('bloodGroupFilter').value;
+            const dioc = document.getElementById('dioceseFilter').value;
+            const dist = document.getElementById('districtFilter').value;
+            filteredData = allData.filter(row => {
+                const okBG = !bg || String(row[colMap['Blood Group']]).trim() === bg;
+                const okDioc = !dioc || String(row[colMap['Diocese']]).trim() === dioc;
+                const okDist = !dist || String(row[colMap['District']]).trim() === dist;
+                return okBG && okDioc && okDist;
+            });
+            currentPage = 1;
+            renderTable();
+        }
+
+        function resetFilters() {
+            ['bloodGroupFilter', 'dioceseFilter', 'districtFilter'].forEach(id => document.getElementById(id).value = '');
+            filteredData = [...allData]; currentPage = 1; renderTable();
+        }
+
+        function renderTable() {
+            const container = document.getElementById('tableContainer');
+            const count = filteredData.length;
+            document.getElementById('resultsCount').innerHTML =
+                `Showing <strong>${count}</strong> donor${count !== 1 ? 's' : ''}`;
+
+            if (count === 0) {
+                container.innerHTML = `<div class="state-box"><div class="ico">🔍</div><h3>No Donors Found</h3><p>Try changing your filter selections.</p></div>`;
+                return;
+            }
+
+            const start = (currentPage - 1) * PAGE_SIZE;
+            const pageData = filteredData.slice(start, start + PAGE_SIZE);
+            const totalPg = Math.ceil(count / PAGE_SIZE);
+
+            let html = `<div class="table-wrap"><div class="table-scroll"><table>
+    <thead><tr><th>#</th>${DISPLAY_COLS.map(c => `<th>${c.label}</th>`).join('')}</tr></thead>
+    <tbody>`;
+
+            pageData.forEach((row, idx) => {
+                html += `<tr><td class="td-sno">${start + idx + 1}</td>`;
+                DISPLAY_COLS.forEach(col => {
+                    const i = colMap[col.label];
+                    const v = (i !== -1 && i != null && row[i]) ? String(row[i]).trim() : '—';
+                    let cell = v;
+                    if (col.cls === 'td-blood' && v !== '—') cell = `<span class="blood-badge">${v}</span>`;
+                    else if (col.cls === 'td-diocese' && v !== '—') cell = `<span class="diocese-pill">${v}</span>`;
+                    else if (col.cls === 'td-district' && v !== '—') cell = `<span class="district-pill">${v}</span>`;
+                    else if (col.cls === 'td-mobile' && v !== '—') cell = `<a href="tel:${v}">${v}</a>`;
+                    html += `<td class="${col.cls}">${cell}</td>`;
+                });
+                html += `</tr>`;
+            });
+
+            html += `</tbody></table></div>`;
+
+            if (totalPg > 1) {
+                html += `<div class="pagination">`;
+                html += `<button class="pg-btn" onclick="goPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>&#8249;</button>`;
+                for (let p = 1; p <= totalPg; p++) {
+                    if (p === 1 || p === totalPg || Math.abs(p - currentPage) <= 2)
+                        html += `<button class="pg-btn ${p === currentPage ? 'active' : ''}" onclick="goPage(${p})">${p}</button>`;
+                    else if (Math.abs(p - currentPage) === 3)
+                        html += `<span style="color:#D1D5DB;padding:0 4px">&hellip;</span>`;
+                }
+                html += `<button class="pg-btn" onclick="goPage(${currentPage + 1})" ${currentPage === totalPg ? 'disabled' : ''}>&#8250;</button></div>`;
+            }
+
+            html += `</div>`;
+            container.innerHTML = html;
+        }
+
+        function goPage(p) {
+            const total = Math.ceil(filteredData.length / PAGE_SIZE);
+            if (p < 1 || p > total) return;
+            currentPage = p; renderTable();
+            document.getElementById('search').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        loadData();
+    </script>
+</body>
+
+</html>
