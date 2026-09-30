@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<title>Jubilee Cup Quiz - Completed</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --red:#e21b23;--red-dark:#bd1118;--yellow:#ffca05;--yellow-soft:#fff8dc;
+  --ink:#171717;--muted:#676767;--line:#e5e5e5;--green:#42ad45;
+  --card:#fff;--bg:#fafafa;
+}
+*{box-sizing:border-box}
+html{width:100%;overflow-x:hidden}
+html,body{margin:0;padding:0}
+body{
+  min-height:100vh;width:100%;max-width:100%;overflow-x:hidden;
+  font-family:Inter,Arial,sans-serif;color:var(--ink);
+  background:
+    radial-gradient(circle at 8% 12%,rgba(255,202,5,.18),transparent 20%),
+    radial-gradient(circle at 96% 74%,rgba(226,27,35,.11),transparent 24%),
+    #f8f8f8;
+  display:flex;align-items:center;justify-content:center;padding:18px;
+}
+body:before{
+  content:"";position:fixed;z-index:0;inset:auto -8% -70px;height:230px;
+  background:linear-gradient(90deg,rgba(255,202,5,.75),rgba(226,27,35,.8));
+  clip-path:polygon(0 60%,10% 42%,18% 55%,28% 30%,40% 52%,52% 24%,64% 52%,76% 32%,88% 55%,100% 28%,100% 100%,0 100%);
+  opacity:.16;pointer-events:none;
+}
+.app{width:100%;max-width:640px;min-width:0;position:relative;z-index:1}
+.screen{animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:.5;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+.card{
+  position:relative;background:rgba(255,255,255,.98);border:1px solid #e7e7e7;
+  border-radius:18px;overflow:hidden;box-shadow:0 15px 42px rgba(0,0,0,.10);max-width:100%;min-width:0
+}
+.card:before{
+  content:"";position:absolute;left:0;right:0;top:0;height:5px;
+  background:linear-gradient(90deg,var(--red) 0 43%,var(--yellow) 43% 57%,var(--red) 57%)
+}
+
+.done-card{padding:38px 32px 24px;text-align:center;overflow:hidden}
+.confetti{position:absolute;inset:0;pointer-events:none;opacity:.9;background:
+  radial-gradient(circle at 12% 10%,var(--yellow) 0 3px,transparent 4px),
+  radial-gradient(circle at 82% 8%,var(--red) 0 3px,transparent 4px),
+  radial-gradient(circle at 25% 25%,var(--red) 0 2px,transparent 3px),
+  radial-gradient(circle at 75% 25%,var(--yellow) 0 2px,transparent 3px),
+  radial-gradient(circle at 7% 60%,var(--yellow) 0 3px,transparent 4px),
+  radial-gradient(circle at 94% 65%,var(--red) 0 3px,transparent 4px)
+}
+.done-content{position:relative;z-index:2}
+.done-logo{width:100px;height:100px;object-fit:contain;margin-bottom:8px}
+.status-pill{
+  display:inline-flex;align-items:center;gap:7px;margin-bottom:12px;
+  padding:6px 14px;border-radius:999px;background:#eef9f0;border:1px solid #b7dfbd;
+  color:#1f7131;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase
+}
+.status-pill:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
+.done-title{font-family:Anton,Impact,sans-serif;text-transform:uppercase;color:var(--red);font-size:38px;line-height:1;margin:0 0 5px}
+.done-title span{display:block;color:var(--yellow);font-size:34px;text-shadow:0 1px 0 #e4ae00}
+.hero-rule{display:flex;align-items:center;justify-content:center;gap:10px;margin:15px auto 7px;color:var(--red)}
+.hero-rule:before,.hero-rule:after{content:"";height:2px;width:70px;background:var(--red)}
+.hero-rule b{font-size:18px}
+.done-subtitle{margin:0 auto;max-width:460px;color:#444;font-size:14px;line-height:1.55}
+
+.winner-label{
+  margin:28px 0 0;font-size:11px;font-weight:800;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--red)
+}
+.winner-box{
+  position:relative;margin:12px auto 0;max-width:430px;padding:28px 22px 24px;
+  border-radius:14px;border:1px solid #f0e0a8;
+  background:linear-gradient(180deg,var(--yellow-soft),#fff);
+  box-shadow:0 8px 22px rgba(0,0,0,.07)
+}
+.winner-box:before{
+  content:"";position:absolute;left:0;right:0;top:0;height:4px;border-radius:14px 14px 0 0;
+  background:linear-gradient(90deg,var(--yellow),var(--red))
+}
+.trophy{font-size:52px;line-height:1;margin-bottom:6px;animation:trophyPulse 1.8s ease-in-out infinite}
+@keyframes trophyPulse{50%{transform:translateY(-4px) rotate(-4deg)}}
+.winner-name{
+  font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;
+  font-size:34px;line-height:1.08;color:var(--ink);margin:4px 0 10px;overflow-wrap:anywhere
+}
+.winner-diocese{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;
+  background:#fff;border:1.5px solid var(--red);color:var(--red);
+  font-size:14px;font-weight:800
+}
+.winner-diocese .pin{font-size:15px}
+.winner-caption{margin:16px 0 0;color:#6b6b6b;font-size:12px;line-height:1.5}
+
+.thanks{
+  margin:24px auto 0;max-width:470px;padding:16px 18px;border-radius:12px;
+  border:1px solid #eee;background:#fff;color:#444;font-size:13px;line-height:1.6
+}
+.thanks b{color:var(--red)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:100%;max-width:300px;border:0;border-radius:8px;height:48px;padding:0 18px;cursor:pointer;
+  font:800 15px Inter,Arial,sans-serif;letter-spacing:.01em;text-decoration:none;margin:22px auto 0
+}
+.btn-secondary{background:#fff;border:1.5px solid var(--red);color:var(--red)}
+.btn-secondary:hover{background:#fff5f5;transform:translateY(-1px)}
+
+.done-foot{height:62px;margin:24px -32px -24px;background:linear-gradient(90deg,rgba(255,202,5,.9),rgba(226,27,35,.9));clip-path:polygon(0 50%,8% 32%,16% 52%,25% 30%,35% 55%,45% 35%,55% 58%,65% 32%,75% 54%,85% 33%,100% 52%,100% 100%,0 100%)}
+.footer-note{text-align:center;color:#888;font-size:10.5px;margin:12px 0 0}
+
+@media (max-width:760px){
+  body{padding:6px;display:block}
+  .app{margin:0 auto;width:100%}
+  .done-card{width:100%;padding:28px 14px 18px;border-radius:12px}
+  .done-logo{width:76px;height:76px;margin-bottom:4px}
+  .done-title{font-size:30px}
+  .done-title span{font-size:27px}
+  .done-subtitle{font-size:12.5px}
+  .hero-rule:before,.hero-rule:after{width:50px}
+  .winner-box{width:100%;max-width:none;padding:22px 14px 20px}
+  .trophy{font-size:44px}
+  .winner-name{font-size:28px}
+  .winner-diocese{font-size:13px;padding:7px 14px}
+  .thanks{font-size:12px;padding:14px}
+  .btn{height:46px;font-size:14px}
+  .done-foot{height:45px;margin:18px -14px -18px}
+  .footer-note{font-size:9px;margin:8px 0}
+}
+@media (max-width:380px){
+  body{padding:4px}
+  .done-card{padding:22px 11px 15px}
+  .done-logo{width:68px;height:68px}
+  .done-title{font-size:26px}
+  .done-title span{font-size:23px}
+  .winner-name{font-size:24px}
+  .trophy{font-size:40px}
+}
+@media (max-width:320px){
+  .done-title{font-size:23px}
+  .done-title span{font-size:21px}
+  .winner-name{font-size:21px}
+}
+
+</style>
+</head>
+<body>
+
+<div class="app">
+  <div class="screen">
+    <div class="card done-card">
+      <div class="confetti"></div>
+      <div class="done-content">
+
+        <img class="done-logo" src="../imgs/kcym_logo.png" alt="KCYM Logo">
+        <div class="status-pill">Event Completed</div>
+        <h1 class="done-title">JUBILEE CUP<span>QUIZ</span></h1>
+        <div class="hero-rule"><b>⚽</b></div>
+        <p class="done-subtitle">
+          ജൂബിലി കപ്പ് ക്വിസ് മത്സരം വിജയകരമായി പൂർത്തിയായി.
+          പങ്കെടുത്ത എല്ലാ യുവജനങ്ങൾക്കും ഹൃദയം നിറഞ്ഞ നന്ദി.
+        </p>
+
+        <!-- ================= WINNER DETAILS ================= -->
+        <p class="winner-label">Winner</p>
+        <div class="winner-box">
+          <div class="trophy">🏆</div>
+          <h2 class="winner-name">Abhay P Bertin</h2>
+          <div class="winner-diocese"><span class="pin">⛪</span><span>Neyyatinkara Diocese</span></div>
+          <p class="winner-caption">ശരിയുത്തരം നൽകിയവരിൽ നിന്ന് തെരഞ്ഞെടുക്കപ്പെട്ട വിജയി</p>
+        </div>
+        <!-- =============== END OF WINNER DETAILS SECTION =============== -->
+
+        <div class="thanks">
+          ലഹരിവിരുദ്ധ സന്ദേശം ഏറ്റെടുത്ത് ഈ മത്സരത്തിൽ പങ്കാളികളായ ഏവർക്കും
+          <b>KCYM</b> ന്റെ അഭിനന്ദനങ്ങൾ. വിജയിക്ക് ഹൃദയം നിറഞ്ഞ ആശംസകൾ!
+        </div>
+
+        <a class="btn btn-secondary" href="../index.html">⚽ &nbsp;BACK TO HOME</a>
+
+      </div>
+      <div class="done-foot"></div>
+    </div>
+    <p class="footer-note">Registrations for this quiz are now closed.</p>
+  </div>
+</div>
+
+</body>
+</html>
